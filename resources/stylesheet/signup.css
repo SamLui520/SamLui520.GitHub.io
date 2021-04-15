@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#signup-form {
+    border-radius: 10px;
+    width: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+}
+
+#signup-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+}
+
+#signup-form .name {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+#signup-form input {
+    height: 32px;
+}
+
+#signup-form .button {
+    background-color: black;
+    color: cornsilk;
+    margin: auto;
+    height: 32px;
+    width: 80px;
+}
+
+a:link,
+a:visited {
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    background-color: black;
+}
