@@ -22,7 +22,7 @@
                 </li>
                 <li href="#" class="nav-link">
                     <i class="bx bx-add-to-queue"></i>
-                    <span class="mx-2"><a href="page/form.html">Add Item</a></span>
+                    <span class="mx-2" data-bs-toggle="modal" data-bs-target="#AddItemModal">Add Item</span>
                 </li>
                 <li href="#" class="nav-link">
                     <i class="bx bx-log-in"></i>
@@ -377,7 +377,7 @@
                 </div>
             </div>
             <div class="card-add">
-                <a href="page/form.html"><i class="fas fa-plus-circle"></i></a>
+                <a data-bs-toggle="modal" data-bs-target="#AddItemModal"><i class="fas fa-plus-circle"></i></a>
             </div>
             <div class="container-fluid" style="width: 100%; height: 100px;">
 
@@ -406,7 +406,7 @@
                                 <i class="fas fa-grip-horizontal"></i>
                                 </button>
                         <ul class="dropdown-menu" style="width: 100%;">
-                            <li><a class="dropdown-item" href="page/form.html">Add Item</a></li>
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#AddItemModal">Add Item</a></li>
                         </ul>
                     </div>
                     <div class="col-3 dropup" style="padding: 10px;">
@@ -430,7 +430,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#"><i class="far fa-address-card"></i>Guest</a></li>
                                 <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#LoginModal">log in</a></li>
-                                <li><a class="dropdown-item" href="page/form.html">Add Item</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#AddItemModal">Add Item</a></li>
                             </ul>
                         </div>
                     </div>
@@ -706,7 +706,7 @@
                                     <i class="fas fa-grip-horizontal"></i>
                                     </button>
                         <ul class="dropdown-menu" style="width: 100%;">
-                            <li><a class="dropdown-item" href="page/form.html">Add Item</a></li>
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#AddItemModal">Add Item</a></li>
                         </ul>
                     </div>
                     <div class="col-3 dropup" style="padding: 10px;">
@@ -853,9 +853,10 @@
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="Task1Modal" tabindex="-1" aria-labelledby="Task1ModalLabel" aria-hidden="true" style="background-color: indigo-900;">
+        <div class="modal fade" id="Task1Modal" tabindex="-1" aria-labelledby="Task1ModalLabel" aria-hidden="true" >
             <div class="modal-dialog modal-fullscreen-lg-down">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -888,6 +889,73 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="AddItemModal" tabindex="-1" aria-labelledby="AddItemModalLabel" aria-hidden="true" >
+                    <div class="modal-dialog modal-fullscreen-lg-down">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="AddItemModalLabel">Add Item</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="card-modal-left">
+                                    <form class="row g-3">
+                                        <div class="col-10">
+                                            <label for="inputEmail4" class="form-label">Item</label>
+                                            <input type="Name" class="form-control" id="inputEmail4">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="inputState" class="form-label">Status</label>
+                                            <select id="inputState" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>TODO</option>
+                                        <option>IN PROGRESS</option>
+                                        <option>REVIEW</option>
+                                        <option>DONE</option>
+                                        </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputPassword4" class="form-label">Description:</label><br>
+                                            <textarea id="Remarks" name="remarks" rows="8" cols="40" required></textarea>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="Assignedto" class="form-label" placeholder="name">Assigned to:</label>
+                                            <select id="inputState" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>Peter</option>
+                                      <option>Tom</option>
+                                      <option>Mary</option>
+                                      <option>Sam</option>
+                                      </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="birthday">Start Date:</label>
+                                            <input type="date" id="birthday" name="birthday">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="appt">Start Time:</label>
+                                            <input type="time" id="appt" name="appt">
+                                        </div>
+                                        <div class="co-12">
+                                            <label for="birthday">End Date:</label>
+                                            <input type="date" id="birthday" name="birthday">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="appt">End Time:</label>
+                                            <input type="time" id="appt" name="appt">
+                                        </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             <script src='main.js'></script>
             <!-- bootstrap js -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
